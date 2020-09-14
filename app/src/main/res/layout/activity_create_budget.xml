@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1e90ff"
+    android:padding="5dp"
+    tools:context=".CreateBudget">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:padding="5dp"
+    android:layout_margin="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Persoanl Budget"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="#234567"
+        android:layout_marginTop="20sp"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="3dp"
+        android:layout_gravity="center"
+        android:src="@drawable/pbimage"
+        />
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10sp"
+        android:layout_margin="10dp"
+        android:background="#fff"
+        android:elevation="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create to plan"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textColor="#234567"
+            android:layout_marginTop="20sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Id number :"
+            android:textSize="24sp"
+            android:textColor="#234567"
+            android:layout_marginTop="20sp"
+            />
+        <EditText
+            android:id="@+id/txtidnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/inputs"
+            android:hint="Enter Id"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Usrename :"
+            android:textSize="24sp"
+            android:textColor="#234567"
+            android:layout_marginTop="20sp"
+            />
+        <EditText
+            android:id="@+id/txtusername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter username"
+            android:background="@drawable/inputs"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password :"
+            android:textSize="24sp"
+            android:textColor="#234567"
+            android:layout_marginTop="20sp"
+            />
+        <EditText
+            android:id="@+id/txtpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="password"
+            android:background="@drawable/inputs"
+            android:inputType="textPassword" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Password :"
+            android:textSize="24sp"
+            android:textColor="#234567"
+            android:layout_marginTop="20sp"
+            />
+        <EditText
+            android:id="@+id/txtconfirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Confirm password"
+            android:background="@drawable/inputs"
+            android:inputType="textPassword" />
+        <Button
+            android:id="@+id/btncreatebudget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#1e90ff"
+            android:layout_marginTop="10dp"
+            android:text="Create Budget"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="5dp"
+        android:background="#fff">
+    <Button
+        android:id="@+id/btncalllogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF7700"
+        android:layout_marginTop="20dp"
+        android:text="Login Now"
+        android:layout_marginBottom="20dp"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
