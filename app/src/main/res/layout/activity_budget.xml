@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,11 +7,14 @@
     android:orientation="vertical"
     android:padding="10px"
     tools:context=".BudgetActivity">
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
    <ImageView
        android:layout_width="match_parent"
        android:layout_height="200dp"
-       android:padding="5sp"
+       android:padding="5dp"
        android:src="@drawable/pbimage"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,42 +25,211 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Budget name plan"/>
+            android:text="Current active budget"
+            android:textSize="24sp"
+            android:gravity="center"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:padding="10dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="#C1EBF1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Budget  One"
+                    android:textSize="18dp"
+                    android:textColor="#FF9800"
+                    android:gravity="center"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View "/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit "/>
+
+            </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:background="#C1EBF1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Budget  Two"
+                    android:textSize="18dp"
+                    android:textColor="#FF9800"
+                    android:gravity="center"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="View "/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Edit "/>
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="#C1EBF1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Budget  Two"
+                        android:textSize="18dp"
+                        android:textColor="#FF9800"
+                        android:gravity="center"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View "/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edit "/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp" >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="#C1EBF1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Budget  Two"
+                        android:textSize="18dp"
+                        android:textColor="#FF9800"
+                        android:gravity="center"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View "/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Edit "/>
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="24sp"
-            android:text="anual plan"/>
+            android:text=" use for Crud"/>
 
         <EditText
+            android:id="@+id/etidexid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="enter id"
             android:background="@drawable/inputs"
             />
         <EditText
+            android:id="@+id/etidnumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="id number"
             android:background="@drawable/inputs"
             />
         <EditText
+            android:id="@+id/etusrename"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="username"
             android:background="@drawable/inputs"
             />
         <EditText
+            android:id="@+id/etpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="password"
             android:background="@drawable/inputs"
             />
+
         <Button
             android:id="@+id/btnviewbudget"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Select Budgte"/>
+        <Button
+            android:id="@+id/btnupdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Budgte"/>
+        <Button
+            android:id="@+id/btndelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Budgte"/>
 </LinearLayout>
 
 </LinearLayout>
+
+</ScrollView>

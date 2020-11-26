@@ -7,10 +7,13 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class BudgetActivity extends AppCompatActivity {
     DatabaseHelper myDb;
-    Button viewbudget;
+    Button viewbudget,update;
+    TextView txtid,txtidnumber,txtusername,txtpassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +22,13 @@ public class BudgetActivity extends AppCompatActivity {
         myDb = new DatabaseHelper(this);
 
         viewbudget = findViewById(R.id.btnviewbudget);
-
-        viewAllBudget();
+        update = findViewById(R.id.btnupdate);
+        txtid = findViewById(R.id.txtconfirmpassword);
+        txtidnumber = findViewById(R.id.txtidnumber);
+        txtusername = findViewById(R.id.txtusername);
+        txtpassword = findViewById(R.id.txtpassword);
+       // viewAllBudget();
+       // UpdateBudget();
     }
 
     public  void viewAllBudget(){
@@ -55,5 +63,22 @@ public class BudgetActivity extends AppCompatActivity {
         builder.setTitle(title);
         builder.setMessage(message);
         builder.show();
+    }
+
+    public  void UpdateBudget(){
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean  isUpdated = myDb.updateBudget(txtid.getText().toString(),txtidnumber.getText().toString(),
+                        txtusername.getText().toString(),txtpassword.getText().toString());
+
+               if(isUpdated == true){
+                    Toast.makeText(BudgetActivity.this, "updated", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(BudgetActivity.this, "failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }

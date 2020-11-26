@@ -53,7 +53,7 @@ public class CreateBudget extends AppCompatActivity {
               boolean isinserted =  myDb.insertDate(etidnumber.getText().toString(),etusername.getText().toString(),
                         etpassword.getText().toString() );
 
-              if (isinserted = true){
+              if (isinserted == true){
                   Toast.makeText(CreateBudget.this, "Inserted", Toast.LENGTH_SHORT).show();
 
                   Intent intent = new Intent(CreateBudget.this,BudgetActivity.class);
